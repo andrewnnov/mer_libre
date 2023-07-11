@@ -19,6 +19,7 @@ Define methods and properties to interact with elements on the page.
 Add assertions and validations:
 
 Include checks and assertions that confirm expected behavior and results.
+
 Set up CI/CD:
 
 Choose and configure a CI/CD system such as Jenkins, GitLab CI, CircleCI, etc.
