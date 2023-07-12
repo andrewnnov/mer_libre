@@ -1,0 +1,1 @@
+import { HTTPCredentials } from "@playwright/test";
