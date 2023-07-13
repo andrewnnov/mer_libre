@@ -39,3 +39,8 @@ Set up generating test result reports within your CI/CD system.
 Configure deployment:
 
 Define the deployment steps in the CI/CD configuration file after successful test execution.
+
+TASKS
+
+1. feature-001 Create HomePage class
+2.
