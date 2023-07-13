@@ -17,5 +17,4 @@ test('get started link', async ({ page }) => {
   await expect(page).toHaveURL(/.*intro/)
 })
 
-//Test message
 
