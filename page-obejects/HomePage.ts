@@ -48,5 +48,7 @@ export class HomePage {
     await this.page.waitForURL(/\/home/, { timeout: 3000 })
   }
 
+  
+
 
 }
