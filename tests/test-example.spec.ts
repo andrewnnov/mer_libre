@@ -1,8 +1,10 @@
 import { test } from '@playwright/test'
 import { HomePage } from '../page-obejects/HomePage'
+import { IngresaPage } from '../page-obejects/IngresaPage'
 
-test.describe.parallel.only('Enable basic links', async () => {
+test.describe.parallel('Enable basic links', async () => {
   let homePage: HomePage
+  let ingresaPage: IngresaPage
 
   test.beforeEach(async ({ page }) => {
     homePage = new HomePage(page)
@@ -18,5 +20,19 @@ test.describe.parallel.only('Enable basic links', async () => {
     await homePage.clickHistorialCategory()
   })
 
+  test.only("Click ingresa link", async ({page}) => {
 
+    await homePage.clickIngresa()
+    ingresaPage = new IngresaPage(page)
+    await ingresaPage.clickNecesitoAyuda();
+    const buttonExam = await page.locator("(//span[@class='andes-button__content'])[2]");
+    buttonExam.click()
+    
+    const newPage = await page.locator("//span[text()='Administrar y cancelar compras']")
+    
+
+  })
+
+
+  
 })
