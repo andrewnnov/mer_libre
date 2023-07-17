@@ -7,7 +7,11 @@ export class HomePage {
   readonly historialLink: Locator
   readonly superMercadoLink: Locator
   readonly masTardeButton: Locator
+
+  readonly ayudaButton: Locator
+
   readonly ingresaLink: Locator
+
 
   constructor(page: Page) {
     this.page = page
@@ -26,6 +30,11 @@ export class HomePage {
     this.superMercadoLink = page.locator(
       "//li[@class='nav-menu-item']//a[contains(text(), 'Supermercado')]",
     )
+
+    this.ayudaButton = page.locator(
+      "//li[@class='nav-menu-item']//a[contains(text(), 'Ayuda')]"
+    )
+
 
     this.ingresaLink = page.locator("//nav[@id='nav-header-menu']//a[text()='Ingresá']")
 
@@ -52,9 +61,16 @@ export class HomePage {
     await this.page.waitForURL(/\/home/, { timeout: 3000 })
   }
 
+  async clickAyudaCategory() {
+    await this.ayudaButton.waitFor()
+    await this.ayudaButton.click()
+    await this.page.waitForURL(/\/ayuda/, { timeout: 3000 })
+
+
   async clickIngresa() {
     await this.ingresaLink.waitFor()
     await this.ingresaLink.click()
     await this.page.waitForURL(/\/login/, { timeout: 3000 })
+
   }
 }

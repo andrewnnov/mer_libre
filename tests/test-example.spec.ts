@@ -20,19 +20,16 @@ test.describe.parallel('Enable basic links', async () => {
     await homePage.clickHistorialCategory()
   })
 
+
+
   test.only("Click ingresa link", async ({page}) => {
 
     await homePage.clickIngresa()
     ingresaPage = new IngresaPage(page)
     await ingresaPage.clickNecesitoAyuda();
     const buttonExam = await page.locator("(//span[@class='andes-button__content'])[2]");
-    buttonExam.click()
-    
+    buttonExam.click()    
     const newPage = await page.locator("//span[text()='Administrar y cancelar compras']")
-    
-
   })
 
-
-  
 })
