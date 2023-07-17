@@ -1,7 +1,7 @@
 import { test } from '@playwright/test'
 import { HomePage } from '../page-obejects/HomePage'
 
-test.describe.parallel.only('Enable basic links', async () => {
+test.describe.parallel('Enable basic links', async () => {
   let homePage: HomePage
 
   test.beforeEach(async ({ page }) => {
@@ -17,6 +17,5 @@ test.describe.parallel.only('Enable basic links', async () => {
   test('Choose historial link', async ({ page }) => {
     await homePage.clickHistorialCategory()
   })
-
 
 })
