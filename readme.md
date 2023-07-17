@@ -44,3 +44,7 @@ TASKS
 
 1. feature-001 Create HomePage class
 2. TC: Войти на главную страницу. Перейти в раздел Ayuda. Создать пейдж обжэкт для страницы ayuda
+3. feature-003 Create PO for Ingresa
+4.
+5.
+6.
