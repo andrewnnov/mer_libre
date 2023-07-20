@@ -12,7 +12,6 @@ export class HomePage {
 
   readonly ingresaLink: Locator
 
-
   constructor(page: Page) {
     this.page = page
     this.masTardeButton = page.locator(
@@ -32,12 +31,12 @@ export class HomePage {
     )
 
     this.ayudaButton = page.locator(
-      "//li[@class='nav-menu-item']//a[contains(text(), 'Ayuda')]"
+      "//li[@class='nav-menu-item']//a[contains(text(), 'Ayuda')]",
     )
 
-
-    this.ingresaLink = page.locator("//nav[@id='nav-header-menu']//a[text()='Ingresá']")
-
+    this.ingresaLink = page.locator(
+      "//nav[@id='nav-header-menu']//a[text()='Ingresá']",
+    )
   }
 
   async visit() {
@@ -46,7 +45,7 @@ export class HomePage {
   }
 
   clickMasTardeButton = async () => {
-    await this.masTardeButton.click()    
+    await this.masTardeButton.click()
   }
 
   async clickOfertaCategory() {
@@ -65,12 +64,11 @@ export class HomePage {
     await this.ayudaButton.waitFor()
     await this.ayudaButton.click()
     await this.page.waitForURL(/\/ayuda/, { timeout: 3000 })
-
+  }
 
   async clickIngresa() {
     await this.ingresaLink.waitFor()
     await this.ingresaLink.click()
     await this.page.waitForURL(/\/login/, { timeout: 3000 })
-
   }
 }
