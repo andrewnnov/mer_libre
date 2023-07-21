@@ -7,6 +7,8 @@ export class HomePage {
   readonly historialLink: Locator
   readonly superMercadoLink: Locator
   readonly masTardeButton: Locator
+  readonly searchField: Locator
+  readonly searchIconButton: Locator
 
   readonly ayudaButton: Locator
 
@@ -37,6 +39,9 @@ export class HomePage {
     this.ingresaLink = page.locator(
       "//nav[@id='nav-header-menu']//a[text()='Ingresá']",
     )
+
+    this.searchField = page.locator("//input[@class='nav-search-input']")
+    this.searchIconButton = page.locator("//div[@class='nav-icon-search']")
   }
 
   async visit() {
@@ -70,5 +75,11 @@ export class HomePage {
     await this.ingresaLink.waitFor()
     await this.ingresaLink.click()
     await this.page.waitForURL(/\/login/, { timeout: 3000 })
+  }
+
+  async searchItem(item: string) {
+    await this.searchField.waitFor()
+    await this.searchField.type(item)
+    await this.searchIconButton.click()
   }
 }
