@@ -20,7 +20,7 @@ test.describe.parallel('Enable basic links', async () => {
     await homePage.clickHistorialCategory()
   })
 
-  test.only('Click ingresa link', async ({ page }) => {
+  test('Click ingresa link', async ({ page }) => {
     await homePage.clickIngresa()
     ingresaPage = new IngresaPage(page)
     await ingresaPage.clickNecesitoAyuda()

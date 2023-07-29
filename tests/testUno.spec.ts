@@ -2,7 +2,7 @@ import { test } from '@playwright/test'
 import { HomePage } from '../page-obejects/HomePage'
 import { AyudaPage } from '../page-obejects/AyudaPage'
 
-test.describe.parallel.only('ayuda', async () => {
+test.describe.parallel('ayuda', async () => {
   let homePage: HomePage
   let ayudaPage: AyudaPage
 

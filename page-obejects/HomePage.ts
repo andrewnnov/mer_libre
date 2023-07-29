@@ -9,10 +9,10 @@ export class HomePage {
   readonly masTardeButton: Locator
   readonly searchField: Locator
   readonly searchIconButton: Locator
-
   readonly ayudaButton: Locator
-
   readonly ingresaLink: Locator
+  readonly moda: Locator
+  readonly vender: Locator
 
   constructor(page: Page) {
     this.page = page
@@ -39,6 +39,8 @@ export class HomePage {
     this.ingresaLink = page.locator(
       "//nav[@id='nav-header-menu']//a[text()='Ingresá']",
     )
+
+    this.moda = page.locator("//nav[@id='nav-header-menu']//a[text()='Ingresá']")
 
     this.searchField = page.locator("//input[@class='nav-search-input']")
     this.searchIconButton = page.locator("//div[@class='nav-icon-search']")
