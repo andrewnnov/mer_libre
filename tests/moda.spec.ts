@@ -10,6 +10,23 @@ test.describe.parallel.only('Moda', async() => {
         homePage.visit()
         homePage.clickMasTardeButton()
     })
+
+
+    test("Choose new boots", async ({page}) => {
+        //choose categorias
+        homePage.clickOfertaCategory()
+        //choose moda
+        
+        //choose hombre
+        //choose Precio 8000 - 12000
+        //choose Marca Topper
+        //choose Categorias - Pantalones
+        //get list of pantalones
+
+    })
+    
+
+
 }
 
 )
