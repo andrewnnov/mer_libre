@@ -1,7 +1,7 @@
 import { test } from '@playwright/test'
 import { HomePage } from '../page-obejects/HomePage'
 
-test.describe.only('Add items to cart', async () => {
+test.describe('Add items to cart', async () => {
   let homePage: HomePage
 
   test.beforeEach(async ({ page }) => {

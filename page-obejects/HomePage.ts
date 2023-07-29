@@ -13,7 +13,6 @@ export class HomePage {
   readonly ingresaLink: Locator
   readonly moda: Locator
   readonly vender: Locator
-  
 
   constructor(page: Page) {
     this.page = page
@@ -56,6 +55,11 @@ export class HomePage {
     await this.masTardeButton.click()
   }
 
+  async clickCategoriasLink() {
+    await this.categoriasLink.waitFor()
+    await this.categoriasLink.hover()
+  }
+
   async clickOfertaCategory() {
     await this.ofertasLink.waitFor()
     await this.ofertasLink.click()
@@ -84,11 +88,5 @@ export class HomePage {
     await this.searchField.waitFor()
     await this.searchField.type(item)
     await this.searchIconButton.click()
-  }
-
-  async chooseOfCategoryInCategorias(category: string) {
-    await this
-
-
   }
 }
